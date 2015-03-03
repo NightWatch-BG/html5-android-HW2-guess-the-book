@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the book</title>
+    <script src="js/index.js"></script>
+    <script src="js/fixedData.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div id="rules">
+        <h1>Правила</h1>
+        <p>По дадени име на автора и заглавие с 50% липсваши букви на случаен принцип трябва да се познае книгата.</p>
+        <p>За да спечели играчът трябва да познае заглавието на книгата с не повече от 3 опита в рамките на минута</p>
+        <p>Например:<br />
+            __лик_я_ _e_сб_,<br />
+            Франсис Скот Фицджералд<br />
+            Отговор: Великият Гетсби<br />
+        </p>
+    <button id="btnStartGame">Започни игра</button>
+    </div>
+    <div id="game">
+        <div id="Author"></div>
+        <div id="halfTitle"></div>
+        <input type="text" id="userGuess">
+        <button id="submitAnswer" onClick="checkTitle()">Submit Answer</button>
+        <span id="jsTimer" style="display: none;"></span>
+        <span id="jsTimerEnd" style="display: none;">Time expired</span>
+        <span id="jsTryAgain" style="display: none;">Try Again</span>
+        <span id="jsSuccess" style="display: none;">SUCCESS</span>
+        <span id="jsFailed" style="display: none;">FAILED</span>
+    </div>
+</body>
+</html>
